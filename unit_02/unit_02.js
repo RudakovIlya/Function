@@ -60,10 +60,14 @@ document.querySelector('.b-3').addEventListener('click', () => t3())
 
 function t4(a, b, c) {
 
+    const out = document.querySelector('.out-4');
+
+    out.innerHTML = b === 0 ? c : a / b;
+
 }
 
 document.querySelector('.b-4').addEventListener('click', function () {
-    t4(7, 12, false);
+    t4(7, 0, false);
 })
 
 
