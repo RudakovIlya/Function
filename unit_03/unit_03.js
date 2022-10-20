@@ -210,6 +210,8 @@ document.querySelector('.b-13').addEventListener('click', function () {
 
 function t14() {
 
+    return `rgba(${t13(0, 255)},${t13(0, 255)},${t13(0, 255)},${Math.random()})`
+
 }
 
 document.querySelector('.b-14').addEventListener('click', function () {
