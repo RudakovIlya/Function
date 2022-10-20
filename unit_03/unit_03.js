@@ -151,6 +151,8 @@ document.querySelector('.b-9').addEventListener('click', function () {
 
 function t10() {
 
+    return arguments.length;
+
 }
 
 document.querySelector('.b-10').addEventListener('click', function () {
