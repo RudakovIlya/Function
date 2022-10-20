@@ -119,7 +119,8 @@ function t6() {
     }
     min = 10000;
     max = 10099;
-    // тут запускаете getRandomInt2
+
+    return getRandomInt(min, max) % 2 === 0 ? even() : odd();
 
 }
 
