@@ -74,7 +74,11 @@ document.querySelector('.b-4').addEventListener('click', function () {
 // Task 5
 // Напишите функцию t5, которая делит число a на b и результат выводит в out-5. Если b равно нулю, то в out-5 выводится аргумент c, который по умолчанию равен нулю.
 
-function t5(a, b, c) {
+function t5(a, b, c = 0) {
+
+    const out = document.querySelector('.out-5');
+
+    out.textContent = b === 0 ? c : a / b;
 
 }
 
