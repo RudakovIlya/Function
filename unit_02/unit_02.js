@@ -221,6 +221,8 @@ const out13 = document.querySelector('.out-13');
 
 function t13(arr, funcArg) {
 
+    funcArg(arr);
+
 }
 
 // функции для вывода уже заготовлены
