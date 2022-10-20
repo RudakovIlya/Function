@@ -3,6 +3,8 @@
 
 function t1(a, b) {
 
+    return a + b;
+
 }
 
 document.querySelector('.b-1').addEventListener('click', function () {
