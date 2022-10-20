@@ -238,6 +238,8 @@ document.querySelector('.b-15').addEventListener('click', function () {
 
 function t16(str) {
 
+    return str.toLowerCase();
+
 }
 
 document.querySelector('.b-16').addEventListener('click', function () {
