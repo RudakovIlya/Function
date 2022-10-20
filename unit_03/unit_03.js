@@ -327,6 +327,8 @@ function t22() {
 
 function callback22(item) {
 
+    return item % 2 === 0;
+
 }
 
 document.querySelector('.b-22').addEventListener('click', function () {
