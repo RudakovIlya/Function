@@ -45,13 +45,15 @@ document.querySelector('.b-2').addEventListener('click', function () {
 // Task 3.
 //Напишите функцию t3, которая принимает два аргумента (число от, число до ) и выводит в блок .out-3 случайное целое число от первого аргумента(включительно) до второго(включительно). Задайте значение по умолчанию для min число 0 для max число 100. Функция запускается по кнопке .b-3. Обратите внимание на запуск функции. Чтобы передать аргументы, нам пришлось обернуть функцию в анонимную.
 
-function t3(min, max) {
+function t3(min = 0, max = 100) {
+
+    const out = document.querySelector('.out-3');
+
+    out.textContent = getRandomInt(min, max);
 
 }
 
-document.querySelector('.b-3').addEventListener('click', function () {
-    t3();
-})
+document.querySelector('.b-3').addEventListener('click', () => t3())
 
 // Task 4
 // Напишите функцию t4, которая делит число a на b и результат выводит в out-4. Если b равно нулю, то в out-4 выводится аргумент c.
