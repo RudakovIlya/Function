@@ -118,6 +118,8 @@ document.querySelector('.b-7').addEventListener('click', function () {
 
 function t8(num, method) {
 
+    return method === 'ceil' ? Math.ceil(num) : Math.floor(num);
+
 }
 
 document.querySelector('.b-8').addEventListener('click', function () {
