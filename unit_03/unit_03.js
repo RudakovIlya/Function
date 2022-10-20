@@ -225,6 +225,8 @@ document.querySelector('.b-14').addEventListener('click', function () {
 
 function t15(str) {
 
+    return str.trim();
+
 }
 
 document.querySelector('.b-15').addEventListener('click', function () {
