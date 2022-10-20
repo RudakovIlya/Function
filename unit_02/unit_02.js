@@ -117,7 +117,7 @@ function t7(arr = [], block) {
 }
 
 document.querySelector('.b-7').addEventListener('click', function () {
-    t7(1, out7);
+    t7([99, 44, 55, 66], out7);
 })
 
 
@@ -128,6 +128,8 @@ document.querySelector('.b-7').addEventListener('click', function () {
 const out8 = document.querySelector('.out-8');
 
 function t8(block, text) {
+
+    block.textContent = text.toLowerCase().trim();
 
 }
 
@@ -144,12 +146,22 @@ document.querySelector('.b-8').addEventListener('click', function () {
 
 const out9 = document.querySelector('.out-9');
 
-function t9(text, block) {
+function t9(text = '', block) {
+
+    if (!block) {
+
+        console.log('No!');
+
+    } else {
+
+        block.textContent = text.toLowerCase().trim();
+
+    }
 
 }
 
 document.querySelector('.b-9').addEventListener('click', function () {
-    t9(' HelLO wORLd       ', out9);
+    t9(' HelLO wORLd       ');
 })
 
 
