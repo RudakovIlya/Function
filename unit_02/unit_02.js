@@ -19,7 +19,7 @@ function t1(min, max) {
 
 }
 
-document.querySelector('.b-1').addEventListener('click', function () {
+document.querySelector('.b-1').addEventListener('click', () => {
     t1(120, 140);
 })
 
