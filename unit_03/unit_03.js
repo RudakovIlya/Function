@@ -292,6 +292,8 @@ document.querySelector('.i-19').addEventListener('input', function () {
 
 function t20(s) {
 
+    return s.split('').reverse().join('');
+
 }
 
 document.querySelector('.b-20').addEventListener('click', function () {
