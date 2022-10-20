@@ -136,6 +136,18 @@ let z7 = 91;
 
 function t7() {
 
+    if (z7 >= 100) {
+
+        out7.textContent = 100;
+
+    } else {
+
+        z7++;
+
+        out7.textContent = z7;
+
+    }
+
 }
 
 document.querySelector('.b-7').addEventListener('click', t7);
