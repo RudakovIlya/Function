@@ -41,12 +41,16 @@ function hello() {
 }
 
 function f2021() {
-    out3.innerHTML += 2021;
+    out3.innerHTML += 2022;
 }
 
 
 function t3() {
-    // тут вызываете hello и f2021
+
+    hello();
+
+    f2021();
+
 }
 
 document.querySelector('.b-3').addEventListener('click', t3);
