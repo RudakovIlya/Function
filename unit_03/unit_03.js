@@ -165,6 +165,8 @@ document.querySelector('.b-10').addEventListener('click', function () {
 
 function t11() {
 
+    return Array.from(arguments).reduce((accum, item) => accum += item);
+
 }
 
 document.querySelector('.b-11').addEventListener('click', function () {
