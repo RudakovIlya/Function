@@ -277,6 +277,8 @@ const out15 = document.querySelector('.out-15');
 
 function t15(num, even, odd) {
 
+    num % 2 == 0 ? even() : odd();
+
 }
 
 function showOne() {
@@ -289,5 +291,5 @@ function showTwo() {
 
 
 document.querySelector('.b-15').addEventListener('click', function () {
-    t15(5, showOne, showTwo);
+    t15(6, showOne, showTwo);
 })
