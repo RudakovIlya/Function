@@ -399,6 +399,19 @@ document.querySelector('.b-25').addEventListener('click', function () {
 
 
 function t26() {
+
+    const iq = document.querySelector('.i-26').value;
+
+    const out = document.querySelector('.out-26');
+
+    if (iq) {
+
+        out.textContent = iq;
+
+    }
+
+    return;
+
 }
 
 document.querySelector('.b-26').addEventListener('click', t26);
