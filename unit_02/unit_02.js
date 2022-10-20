@@ -95,6 +95,8 @@ const out6 = document.querySelector('.out-6');
 
 function t6(arr, block) {
 
+    block.textContent = arr.join(' ');
+
 }
 
 document.querySelector('.b-6').addEventListener('click', function () {
