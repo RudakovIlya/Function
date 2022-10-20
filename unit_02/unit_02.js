@@ -31,6 +31,8 @@ document.querySelector('.b-1').addEventListener('click', () => {
 
 function t2(min, max, block) {
 
+    block.innerHTML = getRandomInt(min, max);
+
 }
 
 document.querySelector('.b-2').addEventListener('click', function () {
