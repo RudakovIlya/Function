@@ -49,6 +49,11 @@ document.querySelector('.b-3').addEventListener('click', function () {
 
 function t4() {
 
+    const rad = document.querySelectorAll('.r-4');
+
+
+    for (const key in rad) if (rad[key].checked) return rad[key].value;
+
 }
 
 document.querySelector('.b-4').addEventListener('click', function () {
