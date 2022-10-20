@@ -102,6 +102,8 @@ document.querySelector('.b-6').addEventListener('click', function () {
 
 function t7(arg) {
 
+    return typeof arg === 'number';
+
 }
 
 document.querySelector('.b-7').addEventListener('click', function () {
