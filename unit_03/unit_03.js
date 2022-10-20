@@ -176,7 +176,9 @@ document.querySelector('.b-11').addEventListener('click', function () {
 // Task 12
 // Напишите функцию, t12, которая возвращает cумму переданных ей аргументов (число). Используем rest.
 
-function t12() {
+function t12(...args) {
+
+    return args.reduce((accum, item) => accum += item);
 
 }
 
