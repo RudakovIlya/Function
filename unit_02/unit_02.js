@@ -110,12 +110,14 @@ document.querySelector('.b-6').addEventListener('click', function () {
 
 const out7 = document.querySelector('.out-7');
 
-function t7(arr, block) {
+function t7(arr = [], block) {
+
+    block.textContent = Array.isArray(arr) ? arr.join(' ') : false;
 
 }
 
 document.querySelector('.b-7').addEventListener('click', function () {
-    t7([99, 44, 55, 66], out7);
+    t7(1, out7);
 })
 
 
