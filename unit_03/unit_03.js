@@ -283,6 +283,8 @@ function t19() {
 
 document.querySelector('.i-19').addEventListener('input', function () {
     document.querySelector('.out-19').style.borderRadius = t19() + 'px';
+    document.querySelector('.out-19').style.width = 100 + 'px';
+    document.querySelector('.out-19').style.height = 100 + 'px';
 })
 
 // Task 20
