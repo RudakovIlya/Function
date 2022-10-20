@@ -264,7 +264,7 @@ document.querySelector('.s-171').addEventListener('change', function () {
 
 function t18() {
 
-    return document.querySelector('.i-18').value
+    return document.querySelector('.i-18').value;
 
 }
 
@@ -276,6 +276,8 @@ document.querySelector('.i-18').addEventListener('input', function () {
 // Напишите функцию, которая получает value из input.i-19 и возвращает его. 
 
 function t19() {
+
+    return document.querySelector('.i-19').value;
 
 }
 
