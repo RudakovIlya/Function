@@ -19,10 +19,12 @@ document.querySelector('.b-1').addEventListener('click', function () {
 
 function t2(a, b) {
 
+    return a > b ? a : b;
+
 }
 
 document.querySelector('.b-2').addEventListener('click', function () {
-    document.querySelector('.out-2').textContent = t2(120, 140);
+    document.querySelector('.out-2').textContent = t2(150, 140);
 })
 
 
