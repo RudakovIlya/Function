@@ -34,6 +34,10 @@ document.querySelector('.b-2').addEventListener('click', function () {
 
 function t3() {
 
+    const ch = document.querySelector('.ch-3');
+
+    return ch.checked ? ch.value : false;
+
 }
 
 document.querySelector('.b-3').addEventListener('click', function () {
