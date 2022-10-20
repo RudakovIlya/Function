@@ -134,6 +134,8 @@ document.querySelector('.b-8').addEventListener('click', function () {
 
 function t9(n, p) {
 
+    return Math.pow(n, p);
+
 }
 
 document.querySelector('.b-9').addEventListener('click', function () {
