@@ -69,15 +69,16 @@ function t4() {
     }
     function f2021() {
         hello();
-        out4.innerHTML += 2021;
+        out4.innerHTML += 2022;
     }
     f2021();
 }
 
 // тут ваша функция t4_1
 
-// document.querySelector('.b-4').addEventListener('click', t4_1);
+const t4_1 = () => t4();
 
+document.querySelector('.b-4').addEventListener('click', t4_1);
 
 
 // Task 5
