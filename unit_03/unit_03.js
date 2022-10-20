@@ -371,6 +371,8 @@ function t24() {
 
 function callback24(item) {
 
+    return item ** 2;
+
 }
 
 document.querySelector('.b-24').addEventListener('click', function () {
