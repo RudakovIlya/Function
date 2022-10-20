@@ -66,6 +66,14 @@ document.querySelector('.b-4').addEventListener('click', function () {
 
 function t5() {
 
+    const s51 = +document.querySelector('.s51').value;
+
+    const s52 = document.querySelector('.s52').value;
+
+    const s53 = +document.querySelector('.s53').value;
+
+    return s52 === '+' ? s51 + s53 : s52 === '-' ? s51 - s53 : s52 === '*' ? s51 * s53 : s52 === '/' ? s51 / s53 : 'NaN';
+
 }
 
 document.querySelector('.b-5').addEventListener('click', function () {
