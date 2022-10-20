@@ -161,7 +161,7 @@ function t9(text = '', block) {
 }
 
 document.querySelector('.b-9').addEventListener('click', function () {
-    t9(' HelLO wORLd       ');
+    t9(' HelLO wORLd       ', out9);
 })
 
 
@@ -173,6 +173,8 @@ document.querySelector('.b-9').addEventListener('click', function () {
 const out10 = document.querySelector('.out-10');
 
 function t10() {
+
+    out10.textContent = arguments.length;
 
 }
 
