@@ -427,6 +427,15 @@ const obj27 = {
 }
 
 function t27(v) {
+
+    for (const key in obj27) {
+        if (obj27[key] === v) {
+            return key
+        } else {
+            return false
+        }
+    }
+
 }
 
 document.querySelector('.b-27').addEventListener('click', function () {
