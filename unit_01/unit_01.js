@@ -96,6 +96,10 @@ function even() {
 
 function t5() {
 
+    const iq = +document.querySelector('.i-5').value;
+
+    return iq % 2 === 0 ? even() : odd();
+
 }
 
 document.querySelector('.b-5').addEventListener('click', t5);
