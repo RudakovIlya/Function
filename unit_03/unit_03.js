@@ -385,6 +385,9 @@ document.querySelector('.b-24').addEventListener('click', function () {
 
 
 function t25(arr) {
+
+    return arr.every(item => typeof item === 'number');
+
 }
 
 document.querySelector('.b-25').addEventListener('click', function () {
