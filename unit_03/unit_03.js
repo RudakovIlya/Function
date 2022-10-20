@@ -346,6 +346,8 @@ function t23() {
 
 function callback23(item) {
 
+    return item ** 2;
+
 }
 
 document.querySelector('.b-23').addEventListener('click', function () {
