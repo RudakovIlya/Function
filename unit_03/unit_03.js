@@ -461,6 +461,9 @@ document.querySelector('.b-28').addEventListener('click', function () {
 // Напишите функцию, которая получает в качестве аргументов строки и возвращает большую строку (прямым сравнением).
 
 function t29(str1, str2) {
+
+    return str1.length > str2.length ? str1 : str2;
+
 }
 
 document.querySelector('.b-29').addEventListener('click', function () {
@@ -477,6 +480,9 @@ function t31() {
 }
 
 function t30() {
+
+    return t31();
+
 }
 
 
