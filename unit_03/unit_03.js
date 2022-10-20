@@ -192,6 +192,12 @@ document.querySelector('.b-12').addEventListener('click', function () {
 
 function t13(min, max) {
 
+    min = Math.ceil(min);
+
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1) + min);
+
 }
 
 document.querySelector('.b-13').addEventListener('click', function () {
