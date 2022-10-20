@@ -167,6 +167,16 @@ function showNumber() {
 
 function t8() {
 
+    if (z8 == 9) {
+
+        z8 = 0;
+
+    }
+
+    z8++;
+
+    showNumber();
+
 }
 
 document.querySelector('.b-8').addEventListener('click', t8);
