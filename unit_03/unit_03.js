@@ -87,6 +87,8 @@ document.querySelector('.b-5').addEventListener('click', function () {
 
 function t6(num1, num2, sign) {
 
+    return sign === '+' ? num1 + num2 : sign === '-' ? num1 - num2 : sign === '*' ? num1 * num2 : sign === '/' ? num1 / num2 : 'NaN';
+
 }
 
 document.querySelector('.b-6').addEventListener('click', function () {
