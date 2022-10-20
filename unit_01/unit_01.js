@@ -24,7 +24,9 @@ out1.textContent = getRandomInt(117, 132);
 // Чуть усложним. Сейчас первая задача жестко завязана на значения 117 и 132. Напишите функцию getRandomInt2, которая на основе min, max генерирует случайное целое число в этом диапазоне и выводит в out-2. Запустите эту функцию. 
 
 const out2 = document.querySelector('.out-2');
+
 let min = 888;
+
 let max = 900;
 
 // функцию пишите здесь
@@ -37,11 +39,15 @@ out2.innerHTML = getRandomInt(min, max);
 const out3 = document.querySelector('.out-3');
 
 function hello() {
+
     out3.innerHTML = 'Hello ';
+
 }
 
 function f2021() {
+
     out3.innerHTML += 2022;
+
 }
 
 
@@ -64,13 +70,21 @@ const out4 = document.querySelector('.out-4');
 
 
 function t4() {
+
     function hello() {
+
         out4.innerHTML = 'Hello ';
+
     }
+
     function f2021() {
+
         hello();
+
         out4.innerHTML += 2022;
+
     }
+
     f2021();
 }
 
@@ -87,11 +101,15 @@ document.querySelector('.b-4').addEventListener('click', t4_1);
 const out5 = document.querySelector('.out-5');
 
 function odd() {
+
     out5.textContent = 'odd';
+
 }
 
 function even() {
+
     out5.textContent = 'even';
+
 }
 
 function t5() {
@@ -132,6 +150,7 @@ document.querySelector('.b-6').addEventListener('click', t6);
 // Дана переменная z7 равная 91. При клике по кнопке b-7 запускается функция t7, которая увеличивает переменную z7 на единицу и выводит в out-7. Добавьте условие, что если z7 равна 100, то дальше мы не увеличиваем значение z7.
 
 const out7 = document.querySelector('.out-7');
+
 let z7 = 91;
 
 function t7() {
@@ -158,7 +177,9 @@ document.querySelector('.b-7').addEventListener('click', t7);
 // Дана переменная z8 равная 0. Напишите функцию t8, которая при клике по .b-8 увеличивает z8 на единицу и запускает функцию showNumber. Если число z8 равно 9, то при последующем клике становится равным 0.
 
 const out8 = document.querySelector('.out-8');
+
 const digit = ['нуль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять'];
+
 let z8 = 0;
 
 function showNumber() {
@@ -187,6 +208,7 @@ document.querySelector('.b-8').addEventListener('click', t8);
 // Напишите функцию t9, которая в зависимости от значения переменной z9, делает активным option s.9 в таким же value. Внимание, z9 может иметь значения 1, 2, 3, 4, 5. Действия запускаются по кнопке .b-9.
 
 let z9 = 5;
+
 const s9 = document.querySelector('.s-9');
 
 function t9() {
@@ -203,15 +225,22 @@ document.querySelector('.b-9').addEventListener('click', t9);
 // Напишите функцию, которая перебирает массив ar10 и в ar10_res записывает только числа из ar10. В конце функции t10 для вывода массива запустите функцию showArr.
 
 const out10 = document.querySelector('.out-10');
+
 let ar10 = [1, 2, 3, '4', '22', 8];
+
 let ar10_res = [];
 
 function showArr() {
+
     out10.textContent = ar10_res.join('_');
+
 }
 
 function t10() {
-    ar10_res = []; // очищаем
+
+    ar10_res = ar10.filter(item => typeof item == 'number');
+
+    showArr()
 
 }
 
