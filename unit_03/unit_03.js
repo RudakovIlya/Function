@@ -307,6 +307,8 @@ document.querySelector('.b-20').addEventListener('click', function () {
 
 function t21(s) {
 
+    return s === 'even';
+
 }
 
 document.querySelector('.b-21').addEventListener('click', function () {
