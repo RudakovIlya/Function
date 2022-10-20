@@ -1,7 +1,21 @@
 // Task 1
 // Напишите функцию t1, которая принимает два аргумента и выводит в .out-1 случайное целое число от первого аргумента(включительно) до второго(включительно). Функция запускается по кнопке .b-1. Обратите внимание на запуск функции. Чтобы передать аргументы, нам пришлось обернуть функцию в анонимную.
 
+const getRandomInt = (min, max) => {
+
+    min = Math.ceil(min);
+
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1) + min);
+
+}
+
 function t1(min, max) {
+
+    const out = document.querySelector('.out-1');
+
+    out.textContent = getRandomInt(min, max);
 
 }
 
