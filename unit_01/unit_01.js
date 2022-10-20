@@ -5,6 +5,19 @@ const out1 = document.querySelector('.out-1');
 
 // функцию пишите здесь
 
+const getRandomInt = (min, max) => {
+
+    min = Math.ceil(min);
+
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1) + min);
+
+}
+
+getRandomInt(117, 132);
+
+out1.textContent = getRandomInt(117, 132);
 
 // Task 2.
 
@@ -94,8 +107,8 @@ function t6() {
     function even() {
         out6.textContent = 'even';
     }
-     min = 10000;
-     max = 10099;
+    min = 10000;
+    max = 10099;
     // тут запускаете getRandomInt2
 
 }
