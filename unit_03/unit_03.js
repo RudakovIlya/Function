@@ -264,7 +264,7 @@ document.querySelector('.s-171').addEventListener('change', function () {
 
 function t18() {
 
-    return document.querySelector('.i-18').value;
+    return document.querySelector('.i-18').value
 
 }
 
