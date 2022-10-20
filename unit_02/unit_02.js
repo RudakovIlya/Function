@@ -203,7 +203,9 @@ document.querySelector('.b-11').addEventListener('click', function () {
 
 const out12 = document.querySelector('.out-12');
 
-function t12() {
+function t12(...args) {
+
+    out12.textContent = args.reduce((accum, item) => accum += item);
 
 }
 
