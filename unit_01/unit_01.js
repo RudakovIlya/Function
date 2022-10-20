@@ -186,10 +186,12 @@ document.querySelector('.b-8').addEventListener('click', t8);
 // Task 9
 // Напишите функцию t9, которая в зависимости от значения переменной z9, делает активным option s.9 в таким же value. Внимание, z9 может иметь значения 1, 2, 3, 4, 5. Действия запускаются по кнопке .b-9.
 
-let z9 = 3;
+let z9 = 5;
 const s9 = document.querySelector('.s-9');
 
 function t9() {
+
+    s9.value = z9;
 
 }
 
