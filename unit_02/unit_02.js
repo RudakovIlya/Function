@@ -247,20 +247,26 @@ const out14 = document.querySelector('.out-14');
 
 function t14(arr, funcArg, block) {
 
+    funcArg(arr, block);
+
 }
 
 // функции для вывода уже заготовлены
 function showArrSpace2(arr, block) {
-    // вывод в блок пишите как в предыдущем примере
+
+    block.innerHTML = arr.join(' ');
+
 }
 
 function showArrUnderscore2(arr, block) {
-    // вывод в блок пишите как в предыдущем примере
+
+    block.innerHTML = arr.join('_');
+
 }
 
 document.querySelector('.b-14').addEventListener('click', function () {
-    t14([3, 4, 5], showArrSpace, out14);
-    // попробуйте также вместо showArrSpace2 поставить showArrUnderscore2
+    t14([3, 4, 5], showArrUnderscore2, out14);
+
 })
 
 
