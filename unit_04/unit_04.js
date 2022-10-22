@@ -48,7 +48,7 @@ document.querySelector('.b-2').addEventListener('click', () => {
 //     document.querySelector('.out-3').textContent = a + b;
 // }
 
-// const t3 = 
+const t3 = (a, b) => document.querySelector('.out-3').textContent = a + b
 
 document.querySelector('.b-3').addEventListener('click', function () {
     t3(4, 5);
