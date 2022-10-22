@@ -48,7 +48,7 @@ console.log(t5.call(document.querySelector('.i-5')));
 
 // тут прописываете запуск
 
-
+t1.apply(document.querySelector('.out-6'))
 
 // Task 7
 // Запустите функцию max с аргументами 5, 8 и контекстом out-7. Функция должна запускаться при загрузке страницы. Используем apply.
