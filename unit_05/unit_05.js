@@ -81,9 +81,9 @@ console.log(res8);
 
 const ar9 = [5, 7, false, 10, 20, 30, 60];
 let res9;
-// let callBack9 = 
+let callBack9 = item => typeof item === 'boolean';
 
-// res9 = ar9.some(callBack9);
+res9 = ar9.some(callBack9);
 
 console.log(res9);
 
