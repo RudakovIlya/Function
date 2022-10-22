@@ -223,6 +223,7 @@ const t15 = (num) => !isNaN(num);
 
 document.querySelector('.b-15').addEventListener('click', function () {
     let num = document.querySelector('.i-15').value;
+
     document.querySelector('.out-15').textContent = t15(num);
 })
 
