@@ -29,7 +29,7 @@ max.call(document.querySelector('.out-3'), 5, 8);
 // Task 4
 // Напишите анонимную функцию, которая при нажатии b-4 запускает max с контектом out-4 и аргументами 22,13. Применяете call.
 
-// document.querySelector('.b-4').addEventListener( дописываете здесь
+document.querySelector('.b-4').addEventListener('click', () => max.call(document.querySelector('.out-4'), 22, 13))
 
 
 // Task 5
