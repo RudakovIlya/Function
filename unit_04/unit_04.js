@@ -200,7 +200,7 @@ document.querySelector('.b-12').addEventListener('click', function () {
 // Task 13
 // Напишите стрелочную функцию, t13, которая возвращает случайное целое число в заданном диапазоне min, max.
 
-// const t13 = 
+const t13 = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 document.querySelector('.b-13').addEventListener('click', function () {
     document.querySelector('.out-13').textContent = t13(100, 120);
