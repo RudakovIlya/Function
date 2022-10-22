@@ -62,7 +62,7 @@ document.querySelector('.b-3').addEventListener('click', function () {
 //     document.querySelector('.out-4').textContent = s.trim().length;
 // }
 
-// const t4 = 
+const t4 = (s) => document.querySelector('.out-4').textContent = s.trim().length;
 
 document.querySelector('.b-4').addEventListener('click', function () {
     t4('   aha     ');
