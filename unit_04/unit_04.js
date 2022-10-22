@@ -9,6 +9,12 @@
 
 const t1 = () => {
 
+    const x = 77;
+
+    const y = 99;
+
+    console.log(x + y);
+
 }
 
 document.querySelector('.b-1').addEventListener('click', t1);
@@ -67,7 +73,7 @@ document.querySelector('.b-4').addEventListener('click', function () {
 // const t5 = 
 
 document.querySelector('.b-5').addEventListener('click', function () {
-    document.querySelector('.out-5').textContent = t5(3,4);
+    document.querySelector('.out-5').textContent = t5(3, 4);
 })
 
 
