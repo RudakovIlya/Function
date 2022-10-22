@@ -36,7 +36,7 @@ document.querySelector('.b-4').addEventListener('click', () => max.call(document
 // Напишите функцию t5, проверяет что у элемента на котором она была вызвана свойство textContent не равно undefined. Возвращает true или false
 
 function t5() {
-    // тут ваш код
+    return this.textContent !== undefined;
 }
 
 console.log(t5.call(document.querySelector('.out-5')));
