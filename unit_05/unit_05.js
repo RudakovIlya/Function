@@ -62,9 +62,9 @@ console.log(res6);
 
 const ar7 = [5, 7, 10, 20, 30, 60];
 let res7;
-// let callBack7 = 
+let callBack7 = (item) => item > 10;
 
-// res7 = ar7.every(callBack7);
+res7 = ar7.every(callBack7);
 
 console.log(res7);
 
