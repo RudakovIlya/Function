@@ -80,7 +80,7 @@ document.querySelector('.b-9').addEventListener('click', () => t9.apply(document
 // Допишите анонимную стрелочную функцию внутри some такую, что принимает элементы массива ar9 из some и возвращет true если тип данных элемента boolean.
 
 let res10;
-// res10 = ar9.some();// сюда в скобки дописываете стрелочную функцию
+res10 = ar9.some(item => typeof item === 'boolean');// сюда в скобки дописываете стрелочную функцию
 
 console.log(res10);
 
