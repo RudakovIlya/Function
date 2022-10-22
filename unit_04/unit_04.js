@@ -142,7 +142,7 @@ document.querySelector('.b-8').addEventListener('click', function () {
 //     });
 // }
 
-// const t9 = 
+const t9 = (arr) => arr.reduce((accum, item) => accum += item);
 
 document.querySelector('.b-9').addEventListener('click', function () {
     document.querySelector('.out-9').textContent = t9([20, 30, 40]);
