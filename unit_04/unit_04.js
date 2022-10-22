@@ -32,6 +32,12 @@ document.querySelector('.b-1').addEventListener('click', t1);
 
 document.querySelector('.b-2').addEventListener('click', () => {
 
+    const x = 99;
+
+    const y = 88;
+
+    document.querySelector('.out-2').textContent = x + y;
+
 });
 
 
