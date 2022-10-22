@@ -23,9 +23,9 @@ console.log(res2);
 
 const ar3 = [4, '5', 6];
 let res3;
-// let callBack3 = 
+let callBack3 = (item) => typeof item === 'number';
 
-// res3 = ar3.filter(callBack3);
+res3 = ar3.filter(callBack3);
 
 console.log(res3);
 
