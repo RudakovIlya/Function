@@ -125,7 +125,7 @@ document.querySelector('.b-7').addEventListener('click', function () {
 //     return arr2;
 // }
 
-// const t8
+const t8 = (arr) => arr.filter(item => item > 5);
 
 
 document.querySelector('.b-8').addEventListener('click', function () {
