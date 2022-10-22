@@ -90,7 +90,7 @@ document.querySelector('.b-5').addEventListener('click', function () {
 //     return ((a % 2 === 0) ? true : false);
 // }
 
-// const t6
+const t6 = (a) => a % 2 === 0;
 
 document.querySelector('.b-6').addEventListener('click', function () {
     document.querySelector('.out-6').textContent = t6(34);
