@@ -259,10 +259,10 @@ document.querySelector('.b-18').addEventListener('click', function () {
 // Task 19
 // Напишите стрелочную функцию t19, которая принимает строку и аргумент true или false. Если второй аргумент false - то возвращает строку. Если true - возвращает перевернутую строку.
 
-// const t19
+const t19 = (str, bool) => bool ? str.split('').reverse().join('') : str;
 
 document.querySelector('.b-19').addEventListener('click', function () {
-    document.querySelector('.out-19').textContent = t19('hello', true);
+    document.querySelector('.out-19').textContent = t19('hello', false);
 })
 
 
