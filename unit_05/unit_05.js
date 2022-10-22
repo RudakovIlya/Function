@@ -3,9 +3,9 @@
 
 const ar1 = [4, 5, 6];
 let res1;
-// let callBack1 = 
+let callBack1 = (item) => item ** 3;
 
-// res1 = ar1.map(callBack1); 
+res1 = ar1.map(callBack1);
 
 console.log(res1);
 
@@ -60,7 +60,7 @@ console.log(res6);
 // Task 7
 // Напишите функцию callBack7 такую, что принимает элементы массива ar7 и возвращет true если они больше 10.
 
-const ar7 = [5,7, 10, 20, 30, 60];
+const ar7 = [5, 7, 10, 20, 30, 60];
 let res7;
 // let callBack7 = 
 
