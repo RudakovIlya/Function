@@ -52,7 +52,7 @@ console.log(res5);
 // Допишите анонимную стрелочную функцию внутри forEach такую, что принимает элементы массива из forEach и пушит их в res6 приведенные к toLowerCase().
 
 let res6 = [];
-// ar5.forEach(); // сюда в скобки дописываете стрелочную функцию
+ar5.forEach(item => res6.push(item.toLowerCase())); // сюда в скобки дописываете стрелочную функцию
 
 console.log(res6);
 
