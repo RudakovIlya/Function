@@ -230,7 +230,7 @@ document.querySelector('.b-15').addEventListener('click', function () {
 // Task 16
 // Напишите стрелочную функцию t16, которая проверяет что в массиве находится четное количество элементов. Возвращает true, false.
 
-// const t16
+const t16 = (arr) => arr.length / 2 === 0;
 
 document.querySelector('.b-16').addEventListener('click', function () {
     document.querySelector('.out-16').textContent = t16([4, 5, 6]);
