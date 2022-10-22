@@ -73,7 +73,7 @@ function t9(...arr) {
     this.textContent = Math.max.apply(null, arr);
 }
 
-// document.querySelector('.b-9').addEventListener( дописываете здесь
+document.querySelector('.b-9').addEventListener('click', () => t9.apply(document.querySelector('.out-9'), ar9))
 
 
 // Task 10
