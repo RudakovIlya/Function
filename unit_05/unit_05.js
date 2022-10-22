@@ -41,9 +41,9 @@ console.log(res4);
 
 const ar5 = ['GaLaxY', 'InFILtratoR', 'DaTaPad', 'APeX hQ'];
 let res5 = [];
-// let callBack5 = 
+let callBack5 = item => res5.push(item.toLowerCase());
 
-// ar5.forEach(callBack5);
+ar5.forEach(callBack5);
 
 console.log(res5);
 
