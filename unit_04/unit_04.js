@@ -276,9 +276,18 @@ const j20 = {
     m: 7
 }
 
-// const t20
+const t20 = (obj, num) => {
+
+    for (const key in obj) {
+
+        if (obj[key] == num) {
+            return true
+        }
+    }
+    return false
+};
 
 document.querySelector('.b-20').addEventListener('click', function () {
-    document.querySelector('.out-20').textContent = t20(j20, 7);
+    document.querySelector('.out-20').textContent = t20(j20, 9);
 })
 
