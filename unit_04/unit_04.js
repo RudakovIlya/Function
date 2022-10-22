@@ -262,7 +262,7 @@ document.querySelector('.b-18').addEventListener('click', function () {
 const t19 = (str, bool) => bool ? str.split('').reverse().join('') : str;
 
 document.querySelector('.b-19').addEventListener('click', function () {
-    document.querySelector('.out-19').textContent = t19('hello', false);
+    document.querySelector('.out-19').textContent = t19('hello', true);
 })
 
 
