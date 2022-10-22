@@ -10,7 +10,11 @@ t1.call(document.querySelector('.out-1'));
 // Task 2
 // Напишите анонимную функцию, которая при нажатии кнопки b-2 запускает функцию t1 с контекстом out-2. Используем call.
 
-// document.querySelector('.b-2').addEventListener( дописываете здесь
+document.querySelector('.b-2').addEventListener('click', () => {
+
+    t1.call(document.querySelector('.out-2'))
+
+})
 
 
 // Task 3.
