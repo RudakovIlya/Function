@@ -210,7 +210,7 @@ document.querySelector('.b-13').addEventListener('click', function () {
 // Task 14
 // Напишите стрелочную функцию t14, которая получает строку как аргумент и возвращает строку очищенную от пробелов ( с начала и конца) или false если строка содержит только пробелы. 
 
-// const t14
+const t14 = (str) => str.trim();
 
 document.querySelector('.b-14').addEventListener('click', function () {
     console.log(t14('           hi              '));
