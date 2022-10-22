@@ -76,7 +76,7 @@ document.querySelector('.b-4').addEventListener('click', function () {
 //     return Math.pow(a, b);
 // }
 
-// const t5 = 
+const t5 = (a, b) => Math.pow(a, b);
 
 document.querySelector('.b-5').addEventListener('click', function () {
     document.querySelector('.out-5').textContent = t5(3, 4);
