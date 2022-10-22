@@ -219,10 +219,10 @@ document.querySelector('.b-14').addEventListener('click', function () {
 // Task 15
 // Напишите стрелочную функцию, которая проверяет что пользователь ввел в input. Если число - возвращает true, если строку - false. 
 
-// const t15
+const t15 = (num) => !isNaN(num);
 
 document.querySelector('.b-15').addEventListener('click', function () {
-    let num = document.querySelector('i-15').value;
+    let num = document.querySelector('.i-15').value;
     document.querySelector('.out-15').textContent = t15(num);
 })
 
