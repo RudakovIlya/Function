@@ -250,10 +250,10 @@ document.querySelector('.b-17').addEventListener('click', function () {
 // Task 18
 // Напишите стрелочную функцию t18, которая получает два аргумента - массив и число. Возвращает true если число есть в массиве и false если нет.
 
-// const t18
+const t18 = (arr, num) => arr.includes(num);
 
 document.querySelector('.b-18').addEventListener('click', function () {
-    document.querySelector('.out-18').textContent = t18([4, 5, 6], 6);
+    document.querySelector('.out-18').textContent = t18([4, 5, 6], 8);
 })
 
 // Task 19
