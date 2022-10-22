@@ -240,7 +240,7 @@ document.querySelector('.b-16').addEventListener('click', function () {
 // Task 17
 // Напишите стрелочную функцию t17, которая проверяет что в массиве находятся только числа. Если да - то возвращает true, если нет, false.
 
-// const t17
+const t17 = (arr) => arr.every(item => typeof item === 'number');
 
 document.querySelector('.b-17').addEventListener('click', function () {
     document.querySelector('.out-17').textContent = t17([4, 5, 6]);
