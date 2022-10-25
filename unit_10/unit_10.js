@@ -142,15 +142,27 @@ let ar6 = [
     9,
     [[[[[10, 'i', 11, [12]]]]]]
 ];
-let ar6_res = [];
+//let ar6_res = [];
 
 function t6(arr) {
+    let ar6_res = [];
 
+    for (let i = 0; i < arr.length; i++) {
+
+        const curr = arr[i];
+
+        if (Array.isArray(curr)) {
+            ar6_res.push(...t6(curr));
+        } else if (typeof curr === 'number') {
+            ar6_res.push(curr);
+        }
+    }
+    return ar6_res
 }
 
 document.querySelector('.b-6').addEventListener('click', () => {
     t6(ar6);
-    document.querySelector('.out-6').textContent = ar6_res;
+    document.querySelector('.out-6').textContent = t6(ar6);
 });
 
 
