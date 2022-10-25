@@ -83,6 +83,11 @@ document.querySelector('.b-7').addEventListener('click', function () {
 let a8 = [1998, 2000, 1999, 2002, 2005];
 let year = 1998;
 
+const t8 = (arr,year) => arr.every(item => item >= year);
+
+document.querySelector('.b-8').addEventListener('click',() => {
+    document.querySelector('.out-8').textContent = t8(a8,year);
+})
 
 // Task 9
 // Метод push мутирует массив. Давайте напишем pure функцию t9 которая принимает массив и число в качестве аргумента и возвращает новый массив равный исходному с добавленным в него числом ( добавленным в конце массива). Запускаться функция дожна при нажатии  на кнопку b-9. Для проверки - выводите результат на страницу через пробел.
