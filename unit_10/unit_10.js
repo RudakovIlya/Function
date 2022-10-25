@@ -268,6 +268,13 @@ let ar9_res = [];
 
 function t9(obj) {
 
+    if (obj.age !== undefined) {
+        for (const key in obj.age) {
+            ar9_res.push(t9(obj.age[key]));
+            t9(obj.age[key])
+        }
+    }
+
 }
 
 document.querySelector('.b-9').addEventListener('click', () => {
