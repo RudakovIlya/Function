@@ -39,6 +39,12 @@ document.querySelector('.b-3').addEventListener('click', () => {
 // Task 4
 // Давайте напишем pure функцию t4, которая выводит переданный ей массив (как аргумент arr) в блок (переданный как аргумент block) через пробел. Функция запускается по кнопке .b-4.
 
+const t4 = (arr,block) => document.querySelector(block).innerHTML = arr.join('-');
+
+document.querySelector('.b-4').addEventListener('click', () => {
+    t4([1,2,3,4,'dsa',212,321,],'.out-4');
+})
+
 // Task 5
 // Давайте напишем pure функцию t5, которая проверяет наличие элемента класс которой передан ей как аргумент (например '.out-5') на странице и возвращает true или false. Функция запускается по кнопке .b-5. 
 
