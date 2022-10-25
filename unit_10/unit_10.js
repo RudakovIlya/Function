@@ -70,12 +70,11 @@ function t3(arg) {
         return rand;
     } else {
         console.log(`recursion: ${rand}`);
-        console.log(rand);
         return t3(arg);
     }
 
 }
-t3(even);
+t3('odd');
 document.querySelector('.b-3').addEventListener('click', () => {
     document.querySelector('.out-3').textContent = t3('even');
 });
@@ -83,9 +82,23 @@ document.querySelector('.b-3').addEventListener('click', () => {
 // Task 4.
 // Функция t4 с помощью randomInteger генерирует случайное число от 0 до 10 и проверяет его наличие в массиве ar4. Если число уже есть - выполняет генерацию заново. Если нет - возвращает это число.
 
+function randomInteger(min, max) {
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+}
 let ar4 = [3, 4, 6, 7, 8];
 
 function t4() {
+
+    const rand = randomInteger(0, 10);
+
+    if (ar4.includes(rand)) {
+        console.log(`recursion: ${rand}`);
+        return t4();
+    } else {
+        console.log(`return: ${rand}`);
+        return rand;
+    }
 
 }
 
