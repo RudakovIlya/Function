@@ -31,12 +31,23 @@ function t2(n) {
 
     function r2(z) {
 
-    }
+        if (z >= n) {
+            return out;
+        } else {
+            out += z + ' ';
 
+            return r2(z + 2);
+        }
+
+    }
+    r2(0);
+    const outS = document.querySelector('.out-2');
+
+    outS.textContent = out;
 }
 
 document.querySelector('.b-2').addEventListener('click', () => {
-    t2(5);
+    t2(100);
 })
 
 // Task 3.
