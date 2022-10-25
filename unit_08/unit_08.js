@@ -69,11 +69,11 @@ document.querySelector('.b-6').addEventListener('click',() => {
 const out7 = document.querySelector('.out-7');
 
 function t7(block, text) {
-
+    block.textContent = text.toLowerCase().trim();
 }
 
 document.querySelector('.b-7').addEventListener('click', function () {
-    t7(out8, ' HelLO wORLd       ');
+    t7(out7, ' HelLO wORLd       ');
 })
 
 
