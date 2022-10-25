@@ -60,8 +60,22 @@ function randomInteger(min, max) {
 
 function t3(arg) {
 
-}
+    const rand = randomInteger(0, 100);
+    console.log(`Start rand value: ${rand}`);
+    if (arg == 'even' && rand % 2 === 0) {
+        console.log(`Even: ${rand}`);
+        return rand;
+    } else if (arg == 'odd' && rand % 2 !== 0) {
+        console.log(`Odd: ${rand}`);
+        return rand;
+    } else {
+        console.log(`recursion: ${rand}`);
+        console.log(rand);
+        return t3(arg);
+    }
 
+}
+t3(even);
 document.querySelector('.b-3').addEventListener('click', () => {
     document.querySelector('.out-3').textContent = t3('even');
 });
