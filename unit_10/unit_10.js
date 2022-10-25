@@ -113,6 +113,19 @@ let ar5 = [];
 
 function t5() {
 
+    const rand = randomInteger(0, 10);
+
+    ar5.push(rand);
+
+    const arnew = ar5.reduce((accum, item) => accum += item);
+
+    if (arnew >= 30) {
+        return ar5;
+    } else {
+        console.log(ar5);
+        return t5()
+    }
+
 }
 
 document.querySelector('.b-5').addEventListener('click', () => {
