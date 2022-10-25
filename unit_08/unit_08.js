@@ -48,6 +48,12 @@ document.querySelector('.b-4').addEventListener('click', () => {
 // Task 5
 // Давайте напишем pure функцию t5, которая проверяет наличие элемента класс которой передан ей как аргумент (например '.out-5') на странице и возвращает true или false. Функция запускается по кнопке .b-5. 
 
+const t5 = (selector) => document.querySelector(`.${selector}`).classList.contains(selector);
+
+document.querySelector('.b-5').addEventListener('click',() => {
+    document.querySelector('.out-5').innerHTML = t5('out-5');
+})
+
 // Task 6
 // Давайте напишем pure функцию t6, которая получает массив и возвращает его развернутым на 180 градусов ( чистый аналог reverse ). Функция запускается по кнопке .b-6. Для проверки - выводите результат на страницу, через пробел.
 
