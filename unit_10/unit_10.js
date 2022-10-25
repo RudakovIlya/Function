@@ -5,13 +5,15 @@ function t1(n) {
     let out = '';
 
     function r1(z) {
-        if( n <=0){
-            return n;
-        }else {
-            return t1(n - 1);
+        if (z === -1) {
+            return out;
+        } else {
+            out += z + ' ';
+            return r1(z - 1);
         }
     }
-document.querySelector('.out-1').textContent = out;
+    r1(n)
+    document.querySelector('.out-1').textContent = out;
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
