@@ -5,9 +5,13 @@ function t1(n) {
     let out = '';
 
     function r1(z) {
-
+        if( n <=0){
+            return n;
+        }else {
+            return t1(n - 1);
+        }
     }
-
+document.querySelector('.out-1').textContent = out;
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
@@ -232,3 +236,10 @@ document.querySelector('.b-10').addEventListener('click', () => {
     document.querySelector('.out-19').innerHTML = ar10_res;
 });
 
+function doubleChar(str) {
+
+    return str.split(' ').map(item => item.repeat(1)).join('');
+
+}
+
+console.log(doubleChar('abcde'))
