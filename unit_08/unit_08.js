@@ -107,3 +107,15 @@ document.querySelector('.b-9').addEventListener('click',()=> {
 // Task 10
 // Метод push мутирует массив. Давайте напишем pure функцию t10 которая принимает массив и любое количество чисел в качестве аргументов и возвращает новый массив равный исходному с добавленными в него числами ( добавленным в конце массива). Запускаться функция дожна при нажатии  на кнопку b-10. Для проверки - выводите результат на страницу через пробел. 
 
+const t10 = (arr,...args) => {
+    const newArr = arr.map(item => item);
+
+    newArr.push(...args);
+
+    return newArr.join(' ');
+
+}
+
+document.querySelector('.b-10').addEventListener('click',() => {
+    document.querySelector('.out-10').textContent = t10([1,2,3,4,5,6],7,8,9,10,11);
+})
