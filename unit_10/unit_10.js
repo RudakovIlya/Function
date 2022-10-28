@@ -335,11 +335,3 @@ document.querySelector('.b-10').addEventListener('click', () => {
     }
     document.querySelector('.out-19').innerHTML = ar10_res;
 });
-
-function doubleChar(str) {
-
-    return str.split(' ').map(item => item.repeat(1)).join('');
-
-}
-
-console.log(doubleChar('abcde'))
