@@ -322,13 +322,9 @@ let ar10 = {
         }
     }
 }
-
 let ar10_res = [];
-
 function t10(k, obj) {
-
 }
-
 document.querySelector('.b-10').addEventListener('click', () => {
     for (let key in ar10) {
         t9(key, ar10[key]);
