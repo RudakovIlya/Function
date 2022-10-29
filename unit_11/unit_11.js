@@ -104,12 +104,29 @@ document.querySelector('.b-3').addEventListener('click', () => {
 
 
 // Task 4
+
 // При нажатии кнопки запускается функция t4. Функция t4, с помощью рекурсивной функции r4 должна тем тегам внутри z-4, которые не имеют вложенных тегов добавить style.background = orange. 
 
 function t4(elem) {
     r4(elem);
 
     function r4(element) {
+
+        const nodes = element.children;
+
+        Array.from(nodes).forEach(item => {
+
+            if (item.children.length !== 0) {
+
+                r4(item);
+
+            } else {
+
+                item.style.color = 'red'
+
+            }
+
+        })
 
     }
 }
