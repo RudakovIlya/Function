@@ -213,11 +213,25 @@ let ar7_res = [];
 
 function t7(arg) {
 
+    for (const item of arg) {
+
+        if (Array.isArray(item)) {
+
+            t7(item);
+
+        } else {
+            ar7_res.push(item);
+        }
+
+    }
+
+    return ar7_res;
+
 }
 
 document.querySelector('.b-7').addEventListener('click', () => {
     t7(ar7);
-    document.querySelector('.out-7').textContent = ar7_res;
+    document.querySelector('.out-7').textContent = ar7_res.join('_');
 });
 
 
