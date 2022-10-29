@@ -240,6 +240,20 @@ document.querySelector('.b-7').addEventListener('click', () => {
 
 function t8() {
 
+    const rand = randomInteger(1000, 9000);
+
+    const first = +rand.toString().slice(0, 1) + +rand.toString().slice(1, 2);
+
+    const second = +rand.toString().slice(2, 3) + +rand.toString().slice(3);
+
+    if (first === second) {
+        return rand;
+    } else {
+
+        return t8();
+
+    }
+
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
