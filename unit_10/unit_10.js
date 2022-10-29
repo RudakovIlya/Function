@@ -2,11 +2,28 @@
 // Функция принимает число n. Напишите рекурсивную функцию r1, которая выводит числа от n до нуля в out-1. Разделитель - пробел.
 
 function t1(n) {
+
     let out = '';
 
     function r1(z) {
 
+        if (z === -1) {
+
+            return out;
+
+        } else {
+
+            out += z + ' ';
+
+            return r1(z - 1);
+
+        }
+
     }
+
+    r1(n);
+
+    document.querySelector('.out-1').textContent = out;
 
 }
 
