@@ -195,11 +195,7 @@ function generateDay() {
         'Sunday'
     ];
 
-    return function (n) {
-
-        return days[n - 1];
-
-    };
+    return (n) => days[n - 1];
 }
 
 const day = generateDay();
@@ -214,6 +210,7 @@ console.log(day(3));
 // Напишите функцию замыкание generateMonth, внутри которой создан массив month с именами дней недели и return анонимной функции, которая получает аргумент n и возвращает month[n-1] день недели. 
 
 function generateMonth() {
+
     const month = [
         'January',
         'February',
@@ -229,8 +226,12 @@ function generateMonth() {
         'December'
     ];
 
+    return (n) => month[n - 1];
+
 }
-// const month = generateMonth();
-// console.log(generateMonth(2));
-// console.log(generateMonth(3));
+const month = generateMonth();
+
+console.log(month(2));
+
+console.log(month(3));
 
