@@ -301,7 +301,16 @@ let ar9_res = [];
 
 function t9(obj) {
 
+    for (const key in obj) {
+        if (typeof obj[key] === 'number') {
+            ar9_res.push(obj[key])
+        } else {
+            t9(obj[key]);
+        }
+    }
+
 }
+
 
 document.querySelector('.b-9').addEventListener('click', () => {
     for (let key in ar9) {
