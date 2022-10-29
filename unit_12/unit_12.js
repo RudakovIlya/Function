@@ -126,7 +126,7 @@ function generatePassword2(arr, n) {
 
 }
 
-let password2 = generatePassword2(['b', 'y', 'Y', 'b', 'z', '@', 'd', '/', '*', '!', '@', '#', '$', '%', '^'], 10);
+let password2 = generatePassword2(['b', 'y', 'Y', 'b', 'z', '@', 'd', '/', '*', '!', '@', '#', '$', '%', '^', '1', '2'], 10);
 
 console.log(password2());
 
