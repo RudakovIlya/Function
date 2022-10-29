@@ -5,15 +5,9 @@ function t1(n) {
     let out = '';
 
     function r1(z) {
-        if (z === -1) {
-            return out;
-        } else {
-            out += z + ' ';
-            return r1(z - 1);
-        }
+
     }
-    r1(n)
-    document.querySelector('.out-1').textContent = out;
+
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
@@ -31,23 +25,12 @@ function t2(n) {
 
     function r2(z) {
 
-        if (z >= n) {
-            return out;
-        } else {
-            out += z + ' ';
-
-            return r2(z + 2);
-        }
-
     }
-    r2(0);
-    const outS = document.querySelector('.out-2');
 
-    outS.textContent = out;
 }
 
 document.querySelector('.b-2').addEventListener('click', () => {
-    t2(100);
+    t2(5);
 })
 
 // Task 3.
@@ -60,21 +43,8 @@ function randomInteger(min, max) {
 
 function t3(arg) {
 
-    const rand = randomInteger(0, 100);
-    console.log(`Start rand value: ${rand}`);
-    if (arg == 'even' && rand % 2 === 0) {
-        console.log(`Even: ${rand}`);
-        return rand;
-    } else if (arg == 'odd' && rand % 2 !== 0) {
-        console.log(`Odd: ${rand}`);
-        return rand;
-    } else {
-        console.log(`recursion: ${rand}`);
-        return t3(arg);
-    }
-
 }
-t3('odd');
+
 document.querySelector('.b-3').addEventListener('click', () => {
     document.querySelector('.out-3').textContent = t3('even');
 });
@@ -82,23 +52,9 @@ document.querySelector('.b-3').addEventListener('click', () => {
 // Task 4.
 // Функция t4 с помощью randomInteger генерирует случайное число от 0 до 10 и проверяет его наличие в массиве ar4. Если число уже есть - выполняет генерацию заново. Если нет - возвращает это число.
 
-function randomInteger(min, max) {
-    let rand = min + Math.random() * (max + 1 - min);
-    return Math.floor(rand);
-}
 let ar4 = [3, 4, 6, 7, 8];
 
 function t4() {
-
-    const rand = randomInteger(0, 10);
-
-    if (ar4.includes(rand)) {
-        console.log(`recursion: ${rand}`);
-        return t4();
-    } else {
-        console.log(`return: ${rand}`);
-        return rand;
-    }
 
 }
 
@@ -112,19 +68,6 @@ document.querySelector('.b-4').addEventListener('click', () => {
 let ar5 = [];
 
 function t5() {
-
-    const rand = randomInteger(0, 10);
-
-    ar5.push(rand);
-
-    const arnew = ar5.reduce((accum, item) => accum += item);
-
-    if (arnew >= 30) {
-        return ar5;
-    } else {
-        console.log(ar5);
-        return t5()
-    }
 
 }
 
@@ -142,27 +85,15 @@ let ar6 = [
     9,
     [[[[[10, 'i', 11, [12]]]]]]
 ];
-
+let ar6_res = [];
 
 function t6(arr) {
-    let ar6_res = [];
 
-    for (let i = 0; i < arr.length; i++) {
-
-        const curr = arr[i];
-
-        if (Array.isArray(curr)) {
-            ar6_res.push(...t6(curr));
-        } else if (typeof curr === 'number') {
-            ar6_res.push(curr);
-        }
-    }
-    return ar6_res
 }
 
 document.querySelector('.b-6').addEventListener('click', () => {
     t6(ar6);
-    document.querySelector('.out-6').textContent = t6(ar6);
+    document.querySelector('.out-6').textContent = ar6_res;
 });
 
 
@@ -176,50 +107,22 @@ let ar7 = [
     [[['hiiii']]],
     ['i', [[[[[['hi']]]]]]]
 ];
+let ar7_res = [];
 
 function t7(arg) {
 
-    let ar7_res = [];
-
-    for (let i = 0; i < arg.length; i++) {
-
-        const curr = arg[i];
-
-        if (Array.isArray(curr)) {
-            ar7_res.push(...t7(curr));
-        } else if (typeof curr === 'string') {
-            ar7_res.push(curr);
-        }
-
-    }
-    return ar7_res
 }
 
 document.querySelector('.b-7').addEventListener('click', () => {
-    document.querySelector('.out-7').textContent = t7(ar7).join(' ');
+    t7(ar7);
+    document.querySelector('.out-7').textContent = ar7_res;
 });
 
 
 // Task 8.
 // Напишите рекурсивную функцию t8, которая получает с помощью randomInt целое число от 1000 до 9000 и проверяет если сумма первых двух цифр числа равна сумме 3 и 4 числа то возвращает это число. Если нет - повторяет операцию. Например число 1235 не удовлетворяет этому условию, потому что 1+2 не равно 3+5. А вот число 7180  - удовлетворяет.
 
-function randomInteger(min, max) {
-    let rand = min + Math.random() * (max + 1 - min);
-    return Math.floor(rand);
-}
-
 function t8() {
-
-    const rand = randomInteger(1000, 9000);
-
-    const str = rand.toString().slice(0, 2);
-
-    if (+str[0] + +str[1] === 3 || +str[0] + +str[1] === 4) {
-        return rand;
-    } else {
-        console.log(rand);
-        return t8();
-    }
 
 }
 
@@ -267,13 +170,6 @@ let ar9 = {
 let ar9_res = [];
 
 function t9(obj) {
-
-    if (obj.age !== undefined) {
-        for (const key in obj.age) {
-            ar9_res.push(t9(obj.age[key]));
-            t9(obj.age[key])
-        }
-    }
 
 }
 
@@ -335,3 +231,4 @@ document.querySelector('.b-10').addEventListener('click', () => {
     }
     document.querySelector('.out-19').innerHTML = ar10_res;
 });
+
