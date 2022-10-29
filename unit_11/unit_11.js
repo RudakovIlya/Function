@@ -7,6 +7,17 @@ function t1(elem) {
 
     function r1(element) {
 
+        const child = element.children;
+
+
+        Array.from(child).forEach(item => {
+
+            out += item.tagName + ' ';
+
+            r1(item);
+
+        });
+
     }
 
 
