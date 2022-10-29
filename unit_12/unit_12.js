@@ -89,22 +89,46 @@ console.log(count4());
 // Task 5
 // Напишите функцию замыкание generatePassword, которая принимает аргумент - массив символов, и содержит в себе две функции. Первая функция randomInteger(min, max) возрвщает случайное целое число в диапазоне, а вторую функцию возвращает (делает return). Данная функция, которую возвращают должна возвращать случайный символ из массива переданного функции generatePassword в качестве аргумента. 
 
-// function generatePassword(arr) {
+function generatePassword(arr) {
 
-// }
+    const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-// let password = generatePassword(['b', 'y', 'Y', 'b', 'z']);
-// console.log(password());
+    return () => arr[randomInteger(0, arr.length - 1)];
 
+}
+
+let password = generatePassword(['b', 'y', 'Y', 'b', 'z']);
+
+console.log(password());
+
+console.log(password());
 
 // Task 6
 // Напишите функцию замыкание generatePassword2, которая принимает два аргумента - массив символов (arr), и длину пароля(n). Функция  содержит в себе две функции. Первая функция randomInteger(min, max) , а вторую функцию возвращает (делает return). Данная функция, которую возвращают должна возвращать строку длинной n из символов массива arr. Символы выбираются случайным образом. 
 
-// function generatePassword2(arr, n) {
-// }
+function generatePassword2(arr, n) {
 
-// let password2 = generatePassword2(['b', 'y', 'Y', 'b', 'z'], 4);
-// console.log(password2());
+    const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+
+    return () => {
+
+        let str = '';
+
+        for (let i = 0; i < n; i++) {
+
+            str += arr[randomInteger(0, arr.length - 1)];
+
+        }
+
+        return str;
+
+    }
+
+}
+
+let password2 = generatePassword2(['b', 'y', 'Y', 'b', 'z', '@', 'd', '/', '*', '!', '@', '#', '$', '%', '^'], 10);
+
+console.log(password2());
 
 
 
