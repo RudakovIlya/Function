@@ -103,6 +103,18 @@ let ar4 = [3, 4, 6, 7, 8];
 
 function t4() {
 
+    const rand = randomInteger(0, 10);
+
+    if (ar4.includes(rand)) {
+
+        return rand;
+
+    } else {
+
+        return t4();
+
+    }
+
 }
 
 document.querySelector('.b-4').addEventListener('click', () => {
