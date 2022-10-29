@@ -24,6 +24,30 @@
 
 (function () {
 
+    let width = 75;
+
+    let height = 30;
+
+    document.querySelector('.b-2-1').addEventListener('click', () => {
+
+        width += 15;
+
+        const out = document.querySelector('.out-2');
+
+        out.style.width = width + 'px';
+
+    });
+
+    document.querySelector('.b-2-2').addEventListener('click', () => {
+
+        height += 15;
+
+        const out = document.querySelector('.out-2');
+
+        out.style.height = height + 'px';
+
+    });
+
 })();
 
 
