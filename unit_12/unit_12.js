@@ -183,24 +183,30 @@ document.querySelector('.out-8').append(spanCreator2('ex4'));
 // Task 9
 // Напишите функцию замыкание generateDay, внутри которой создан массив days с именами дней недели и return анонимной функции, которая получает аргумент n и возвращает days[n-1] день недели. 
 
-// function generateDay() {
-//     const days = [
-//         'Monday',
-//         'Tuesday',
-//         'Wednesday',
-//         'Thursday',
-//         'Friday',
-//         'Saturday',
-//         'Sunday'
-//     ];
+function generateDay() {
 
-//     return function (n) {
-//     };
-// }
+    const days = [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday'
+    ];
 
-// const day = generateDay();
-// console.log(day(2))
-// console.log(day(3))
+    return function (n) {
+
+        return days[n - 1];
+
+    };
+}
+
+const day = generateDay();
+
+console.log(day(2));
+
+console.log(day(3));
 
 
 
