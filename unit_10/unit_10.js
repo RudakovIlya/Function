@@ -74,6 +74,22 @@ function randomInteger(min, max) {
 
 function t3(arg) {
 
+    const rand = randomInteger(0, 100);
+
+    if (arg === 'even' && rand % 2 === 0) {
+
+        return rand;
+
+    } else if (arg === 'odd' && rand % 2 !== 0) {
+
+        return rand;
+
+    } else {
+
+        return t3(arg);
+
+    }
+
 }
 
 document.querySelector('.b-3').addEventListener('click', () => {
@@ -87,6 +103,18 @@ let ar4 = [3, 4, 6, 7, 8];
 
 function t4() {
 
+    const rand = randomInteger(0, 10);
+
+    if (ar4.includes(rand)) {
+
+        return rand;
+
+    } else {
+
+        return t4();
+
+    }
+
 }
 
 document.querySelector('.b-4').addEventListener('click', () => {
@@ -99,6 +127,18 @@ document.querySelector('.b-4').addEventListener('click', () => {
 let ar5 = [];
 
 function t5() {
+
+    const rand = randomInteger(0, 10);
+
+    ar5.push(rand);
+
+    const arnew = ar5.reduce((accum, item) => accum += item);
+
+    if (arnew >= 30) {
+        return ar5;
+    } else {
+        return t5()
+    }
 
 }
 
@@ -116,10 +156,41 @@ let ar6 = [
     9,
     [[[[[10, 'i', 11, [12]]]]]]
 ];
+
 let ar6_res = [];
 
 function t6(arr) {
 
+    for (const item of arr) {
+
+        if (typeof item === 'number') {
+
+            ar6_res.push(item)
+
+        } else if (Array.isArray(item)) {
+
+            t6(item);
+
+        }
+
+    }
+    return ar6_res;
+}
+
+function t61(arr) {
+    let ar6_res = [];
+
+    for (let i = 0; i < arr.length; i++) {
+
+        const curr = arr[i];
+
+        if (Array.isArray(curr)) {
+            ar6_res.push(...t6(curr));
+        } else if (typeof curr === 'number') {
+            ar6_res.push(curr);
+        }
+    }
+    return ar6_res
 }
 
 document.querySelector('.b-6').addEventListener('click', () => {
@@ -142,11 +213,25 @@ let ar7_res = [];
 
 function t7(arg) {
 
+    for (const item of arg) {
+
+        if (Array.isArray(item)) {
+
+            t7(item);
+
+        } else {
+            ar7_res.push(item);
+        }
+
+    }
+
+    return ar7_res;
+
 }
 
 document.querySelector('.b-7').addEventListener('click', () => {
     t7(ar7);
-    document.querySelector('.out-7').textContent = ar7_res;
+    document.querySelector('.out-7').textContent = ar7_res.join('_');
 });
 
 
@@ -154,6 +239,20 @@ document.querySelector('.b-7').addEventListener('click', () => {
 // Напишите рекурсивную функцию t8, которая получает с помощью randomInt целое число от 1000 до 9000 и проверяет если сумма первых двух цифр числа равна сумме 3 и 4 числа то возвращает это число. Если нет - повторяет операцию. Например число 1235 не удовлетворяет этому условию, потому что 1+2 не равно 3+5. А вот число 7180  - удовлетворяет.
 
 function t8() {
+
+    const rand = randomInteger(1000, 9000);
+
+    const first = +rand.toString().slice(0, 1) + +rand.toString().slice(1, 2);
+
+    const second = +rand.toString().slice(2, 3) + +rand.toString().slice(3);
+
+    if (first === second) {
+        return rand;
+    } else {
+
+        return t8();
+
+    }
 
 }
 
@@ -202,7 +301,16 @@ let ar9_res = [];
 
 function t9(obj) {
 
+    for (const key in obj) {
+        if (typeof obj[key] === 'number') {
+            ar9_res.push(obj[key])
+        } else {
+            t9(obj[key]);
+        }
+    }
+
 }
+
 
 document.querySelector('.b-9').addEventListener('click', () => {
     for (let key in ar9) {
@@ -251,11 +359,13 @@ let ar10 = {
 }
 let ar10_res = [];
 function t10(k, obj) {
+
 }
+
 document.querySelector('.b-10').addEventListener('click', () => {
     for (let key in ar10) {
-        t9(key, ar10[key]);
+        t10(key, ar10[key]);
     }
-    document.querySelector('.out-19').innerHTML = ar10_res;
+    document.querySelector('.out-10').innerHTML = ar10_res;
 });
 
