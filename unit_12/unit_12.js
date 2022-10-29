@@ -159,17 +159,26 @@ document.querySelector('.out-7').append(spanCreator());
 // Task 8
 //  Напишите функцию замыкание createElement2, которая принимает 1 аргумент -  название тега (elem). Функция createElement2 должна возвращать функцию, которая через createElement создает elem и через innerHTML добавляет в него текст переданный в данную функцию как аргумент text. Созданный тег должен быть возвращен. 
 
-// function generateElement2(elem) {
-//     return function (t) {
-//     }
-// }
+function generateElement2(elem) {
 
-// let divCreator2 = generateElement2('div');
-// let spanCreator2 = generateElement2('span');
-// document.querySelector('.out-8').append(divCreator2('ex1'));
-// document.querySelector('.out-8').append(divCreator2('ex2'));
-// document.querySelector('.out-8').append(spanCreator2('ex3'));
-// document.querySelector('.out-8').append(spanCreator2('ex4'));
+    return function (t) {
+
+        const newElement = document.createElement(elem);
+
+        newElement.innerHTML = t;
+
+        return newElement;
+
+    }
+
+}
+
+let divCreator2 = generateElement2('div');
+let spanCreator2 = generateElement2('span');
+document.querySelector('.out-8').append(divCreator2('ex1'));
+document.querySelector('.out-8').append(divCreator2('ex2'));
+document.querySelector('.out-8').append(spanCreator2('ex3'));
+document.querySelector('.out-8').append(spanCreator2('ex4'));
 
 // Task 9
 // Напишите функцию замыкание generateDay, внутри которой создан массив days с именами дней недели и return анонимной функции, которая получает аргумент n и возвращает days[n-1] день недели. 
