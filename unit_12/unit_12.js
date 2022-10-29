@@ -74,13 +74,16 @@ console.log(count3());
 // Task 4
 // Напишите функцию замыкание createCount. Внутри функции создайте count равный переданному в createCount аргументу ( по умолчанию равен 0) и сделайте return функции, которая увеличивает count на 1 и возвращает его. 
 
-// function createCount(тут аргумент) {
-// };
+function createCount(arg = 0) {
 
-// let count4 = createCount(444);
+    return () => arg++;
 
-// console.log(count4());
-// console.log(count4());
+};
+
+let count4 = createCount(444);
+
+console.log(count4());
+console.log(count4());
 
 
 // Task 5
