@@ -146,6 +146,26 @@ function t5(elem) {
 
     function r5(element) {
 
+        const child = element.children;
+
+        Array.from(child).forEach(item => {
+
+            if (item.children.length !== 0) {
+
+                r5(item);
+
+            } else {
+
+                const mark = document.createElement('mark');
+
+                mark.append(item.textContent);
+
+                item.replaceWith(mark)
+
+            }
+
+        })
+
     }
 }
 
@@ -153,3 +173,4 @@ document.querySelector('.b-5').addEventListener('click', () => {
     let z5 = document.querySelector('.z-5');
     t5(z5);
 });
+
