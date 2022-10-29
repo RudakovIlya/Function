@@ -376,9 +376,13 @@ function t10(k, obj) {
 
 
 document.querySelector('.b-10').addEventListener('click', () => {
+
     for (let key in ar10) {
+
         t10(key, ar10[key]);
+
     }
+
     document.querySelector('.out-10').innerHTML = ar10_res;
 });
 
