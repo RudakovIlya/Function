@@ -196,6 +196,7 @@ function generateDay() {
     ];
 
     return (n) => days[n - 1];
+
 }
 
 const day = generateDay();
@@ -229,6 +230,7 @@ function generateMonth() {
     return (n) => month[n - 1];
 
 }
+
 const month = generateMonth();
 
 console.log(month(2));
