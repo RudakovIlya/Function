@@ -76,8 +76,23 @@ function t3(elem) {
 
     function r3(element) {
 
-    }
+        const child = element.childNodes;
 
+
+        Array.from(child).forEach(item => {
+
+            if (item.nodeName === '#text') {
+
+                element.textContent += item.textContent;
+
+                out += item.textContent;
+
+            }
+
+            r3(item);
+        })
+
+    }
 
     return out;
 }
@@ -85,7 +100,6 @@ function t3(elem) {
 document.querySelector('.b-3').addEventListener('click', () => {
     let z3 = document.querySelector('.z-3');
     document.querySelector('.out-3').textContent = t3(z3);
-    console.log(t3(z3));
 });
 
 
