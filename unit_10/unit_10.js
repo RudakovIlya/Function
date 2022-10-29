@@ -74,6 +74,22 @@ function randomInteger(min, max) {
 
 function t3(arg) {
 
+    const rand = randomInteger(0, 100);
+
+    if (arg === 'even' && rand % 2 === 0) {
+
+        return rand;
+
+    } else if (arg === 'odd' && rand % 2 !== 0) {
+
+        return rand;
+
+    } else {
+
+        return t3(arg);
+
+    }
+
 }
 
 document.querySelector('.b-3').addEventListener('click', () => {
