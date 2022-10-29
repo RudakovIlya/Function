@@ -39,6 +39,22 @@ function t2(elem) {
 
     function r2(element) {
 
+        const child = element.children;
+
+        Array.from(child).forEach(item => {
+
+            if (Number.isInteger(+item.textContent)) {
+
+                s += +item.textContent;
+
+            } else {
+
+                r2(item);
+
+            }
+
+        })
+
     }
 
 
