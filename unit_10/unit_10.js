@@ -362,12 +362,23 @@ let ar10_res = [];
 
 function t10(k, obj) {
 
+    if (obj.age === undefined) ar10_res.push(k);
+
+    if (obj.parent !== undefined) {
+
+        for (let key in obj.parent) {
+
+            t10(key, obj.parent[key]);
+
+        }
+    }
 }
+
 
 document.querySelector('.b-10').addEventListener('click', () => {
     for (let key in ar10) {
-        t9(key, ar10[key]);
+        t10(key, ar10[key]);
     }
-    document.querySelector('.out-19').innerHTML = ar10_res;
+    document.querySelector('.out-10').innerHTML = ar10_res;
 });
 
