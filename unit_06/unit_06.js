@@ -11,17 +11,14 @@ t1.call(document.querySelector('.out-1'));
 // Напишите анонимную функцию, которая при нажатии кнопки b-2 запускает функцию t1 с контекстом out-2. Используем call.
 
 document.querySelector('.b-2').addEventListener('click', () => {
-
-    t1.call(document.querySelector('.out-2'))
-
-})
-
+    t1.call(document.querySelector('.out-2'));
+});
 
 // Task 3.
 // Запустите функцию max с аргументами 5, 8 и контекстом out-3. Функция должна запускаться при загрузке страницы. Используем call.
 
 function max(a, b) {
-    this.textContent = (a > b) ? a : b;
+    this.textContent = a > b ? a : b;
 }
 
 // тут прописываете запуск
@@ -29,8 +26,11 @@ max.call(document.querySelector('.out-3'), 5, 8);
 // Task 4
 // Напишите анонимную функцию, которая при нажатии b-4 запускает max с контектом out-4 и аргументами 22,13. Применяете call.
 
-document.querySelector('.b-4').addEventListener('click', () => max.call(document.querySelector('.out-4'), 22, 13))
-
+document
+    .querySelector('.b-4')
+    .addEventListener('click', () =>
+        max.call(document.querySelector('.out-4'), 22, 13)
+    );
 
 // Task 5
 // Напишите функцию t5, проверяет что у элемента на котором она была вызвана свойство textContent не равно undefined. Возвращает true или false
@@ -42,22 +42,24 @@ function t5() {
 console.log(t5.call(document.querySelector('.out-5')));
 console.log(t5.call(document.querySelector('.i-5')));
 
-
 // Task 6
 //Запустите функцию t1, с контекстом out-6 с помощью apply. Функция должна запускаться при загрузке страницы.
 
 // тут прописываете запуск
 
-t1.apply(document.querySelector('.out-6'))
+t1.apply(document.querySelector('.out-6'));
 
 // Task 7
 // Запустите функцию max с аргументами 5, 8 и контекстом out-7. Функция должна запускаться при загрузке страницы. Используем apply.
 
-document.querySelector('.b-7').addEventListener('click', () => max.apply(document.querySelector('.out-7'), [5, 8]))
-
+document
+    .querySelector('.b-7')
+    .addEventListener('click', () =>
+        max.apply(document.querySelector('.out-7'), [5, 8])
+    );
 
 // Task 8
-// Метод Math.max - позволяет находить максимум из любого количества переданных в него аргументов. Наприме, он сработает и так Math.max(22,33,1,2,33,44,55,1,100,45) и так Math.max(33,1,2) (проверьте самостоятельно). Минус метода - его тяжело использовать если мы не знаем количество передаваемых в него аргументов. Давайте напишем следующий код (см. код). Как видите, теперь не важно сколько элементов в массиве, и мы всегда сможем найти максимум. Обратите внимание, в качестве контекста мы передали null. 
+// Метод Math.max - позволяет находить максимум из любого количества переданных в него аргументов. Наприме, он сработает и так Math.max(22,33,1,2,33,44,55,1,100,45) и так Math.max(33,1,2) (проверьте самостоятельно). Минус метода - его тяжело использовать если мы не знаем количество передаваемых в него аргументов. Давайте напишем следующий код (см. код). Как видите, теперь не важно сколько элементов в массиве, и мы всегда сможем найти максимум. Обратите внимание, в качестве контекста мы передали null.
 
 const out8 = document.querySelector('.out-8');
 let ar8 = [45, 23, 21];
@@ -73,14 +75,17 @@ function t9(...arr) {
     this.textContent = Math.max.apply(null, arr);
 }
 
-document.querySelector('.b-9').addEventListener('click', () => t9.apply(document.querySelector('.out-9'), ar9))
-
+document
+    .querySelector('.b-9')
+    .addEventListener('click', () =>
+        t9.apply(document.querySelector('.out-9'), ar9)
+    );
 
 // Task 10
 // Допишите анонимную стрелочную функцию внутри some такую, что принимает элементы массива ar9 из some и возвращет true если тип данных элемента boolean.
 
 let res10;
-res10 = ar9.some(item => typeof item === 'boolean');// сюда в скобки дописываете стрелочную функцию
+res10 = ar9.some((item) => typeof item === 'boolean'); // сюда в скобки дописываете стрелочную функцию
 
 console.log(res10);
 

@@ -2,37 +2,26 @@
 // Функция принимает число n. Напишите рекурсивную функцию r1, которая выводит числа от n до нуля в out-1. Разделитель - пробел.
 
 function t1(n) {
-
     let out = '';
 
     function r1(z) {
-
         if (z === -1) {
-
             return out;
-
         } else {
-
             out += z + ' ';
 
             return r1(z - 1);
-
         }
-
     }
 
     r1(n);
 
     document.querySelector('.out-1').textContent = out;
-
 }
 
 document.querySelector('.b-1').addEventListener('click', () => {
     t1(5);
-})
-
-
-
+});
 
 // Task 2
 // Функция принимает число. Напишите рекурсивную функцию r2, которая выводит числа от 0 до введенного числа в out-2 с шагом 2. Разделитель - пробел.
@@ -41,18 +30,13 @@ function t2(n) {
     let out = '';
 
     function r2(z) {
-
         if (z >= n) {
-
             return out;
-
         } else {
-
             out += z + ' ';
 
             return r2(z + 2);
         }
-
     }
 
     r2(0);
@@ -62,7 +46,7 @@ function t2(n) {
 
 document.querySelector('.b-2').addEventListener('click', () => {
     t2(100);
-})
+});
 
 // Task 3.
 // Функция t3 принимает аргумент 'odd' или 'even' и должна возвратить четное или не четное число в диапазоне от 0 до 100. Решите задачу рекурсивно. Для генерации случайных чисел используйте функцию randomInteger.
@@ -73,23 +57,15 @@ function randomInteger(min, max) {
 }
 
 function t3(arg) {
-
     const rand = randomInteger(0, 100);
 
     if (arg === 'even' && rand % 2 === 0) {
-
         return rand;
-
     } else if (arg === 'odd' && rand % 2 !== 0) {
-
         return rand;
-
     } else {
-
         return t3(arg);
-
     }
-
 }
 
 document.querySelector('.b-3').addEventListener('click', () => {
@@ -102,19 +78,13 @@ document.querySelector('.b-3').addEventListener('click', () => {
 let ar4 = [3, 4, 6, 7, 8];
 
 function t4() {
-
     const rand = randomInteger(0, 10);
 
     if (ar4.includes(rand)) {
-
         return rand;
-
     } else {
-
         return t4();
-
     }
-
 }
 
 document.querySelector('.b-4').addEventListener('click', () => {
@@ -127,19 +97,17 @@ document.querySelector('.b-4').addEventListener('click', () => {
 let ar5 = [];
 
 function t5() {
-
     const rand = randomInteger(0, 10);
 
     ar5.push(rand);
 
-    const arnew = ar5.reduce((accum, item) => accum += item);
+    const arnew = ar5.reduce((accum, item) => (accum += item));
 
     if (arnew >= 30) {
         return ar5;
     } else {
-        return t5()
+        return t5();
     }
-
 }
 
 document.querySelector('.b-5').addEventListener('click', () => {
@@ -147,32 +115,28 @@ document.querySelector('.b-5').addEventListener('click', () => {
 });
 
 // Task 6.
-// Напишите рекурсивную функцию t6, которая вытаскивает из массива ar6 числа в массив ar6_res. 
+// Напишите рекурсивную функцию t6, которая вытаскивает из массива ar6 числа в массив ar6_res.
 
 let ar6 = [
     5,
     [3, 4, 'h'],
-    [[5, 6, 'b'], ['c', 7, [8]]],
+    [
+        [5, 6, 'b'],
+        ['c', 7, [8]],
+    ],
     9,
-    [[[[[10, 'i', 11, [12]]]]]]
+    [[[[[10, 'i', 11, [12]]]]]],
 ];
 
 let ar6_res = [];
 
 function t6(arr) {
-
     for (const item of arr) {
-
         if (typeof item === 'number') {
-
-            ar6_res.push(item)
-
+            ar6_res.push(item);
         } else if (Array.isArray(item)) {
-
             t6(item);
-
         }
-
     }
     return ar6_res;
 }
@@ -181,7 +145,6 @@ function t61(arr) {
     let ar6_res = [];
 
     for (let i = 0; i < arr.length; i++) {
-
         const curr = arr[i];
 
         if (Array.isArray(curr)) {
@@ -190,7 +153,7 @@ function t61(arr) {
             ar6_res.push(curr);
         }
     }
-    return ar6_res
+    return ar6_res;
 }
 
 document.querySelector('.b-6').addEventListener('click', () => {
@@ -198,35 +161,22 @@ document.querySelector('.b-6').addEventListener('click', () => {
     document.querySelector('.out-6').textContent = ar6_res;
 });
 
-
 // Task 7.
-// Напишите рекурсивную функцию t7, которая вытаскивает из массива ar7 все строки в ar7_res. 
+// Напишите рекурсивную функцию t7, которая вытаскивает из массива ar7 все строки в ar7_res.
 
-let ar7 = [
-    'hi',
-    ['hii'],
-    [['hiii']],
-    [[['hiiii']]],
-    ['i', [[[[[['hi']]]]]]]
-];
+let ar7 = ['hi', ['hii'], [['hiii']], [[['hiiii']]], ['i', [[[[[['hi']]]]]]]];
 let ar7_res = [];
 
 function t7(arg) {
-
     for (const item of arg) {
-
         if (Array.isArray(item)) {
-
             t7(item);
-
         } else {
             ar7_res.push(item);
         }
-
     }
 
     return ar7_res;
-
 }
 
 document.querySelector('.b-7').addEventListener('click', () => {
@@ -234,12 +184,10 @@ document.querySelector('.b-7').addEventListener('click', () => {
     document.querySelector('.out-7').textContent = ar7_res.join('_');
 });
 
-
 // Task 8.
 // Напишите рекурсивную функцию t8, которая получает с помощью randomInt целое число от 1000 до 9000 и проверяет если сумма первых двух цифр числа равна сумме 3 и 4 числа то возвращает это число. Если нет - повторяет операцию. Например число 1235 не удовлетворяет этому условию, потому что 1+2 не равно 3+5. А вот число 7180  - удовлетворяет.
 
 function t8() {
-
     const rand = randomInteger(1000, 9000);
 
     const first = +rand.toString().slice(0, 1) + +rand.toString().slice(1, 2);
@@ -249,68 +197,59 @@ function t8() {
     if (first === second) {
         return rand;
     } else {
-
         return t8();
-
     }
-
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
     document.querySelector('.out-8').textContent = t8();
 });
 
-
 // Task 9.
-// Напишите рекурсивную функцию t9, которая создает массив ar9_res состоящий из возраста (age) пользователей прописанных в ar9. 
+// Напишите рекурсивную функцию t9, которая создает массив ar9_res состоящий из возраста (age) пользователей прописанных в ar9.
 
 let ar9 = {
-    "ivanov": {
+    ivanov: {
         age: 25,
         parent: {
-            "ivanov-a": {
-                age: 45
+            'ivanov-a': {
+                age: 45,
             },
-            "ivanov-b": {
+            'ivanov-b': {
                 age: 43,
                 parent: {
-                    "sergeev-a": {
+                    'sergeev-a': {
                         age: 88,
                         parent: {
-                            "lionenko": {}
-                        }
+                            lionenko: {},
+                        },
                     },
-                }
-            }
-        }
+                },
+            },
+        },
     },
-    "kostenko": {
+    kostenko: {
         age: 56,
         parent: {
-            "ignatenko": {
-
+            ignatenko: {},
+            sniezko: {
+                age: 45,
             },
-            "sniezko": {
-                age: 45
-            }
-        }
-    }
-}
+        },
+    },
+};
 
 let ar9_res = [];
 
 function t9(obj) {
-
     for (const key in obj) {
         if (typeof obj[key] === 'number') {
-            ar9_res.push(obj[key])
+            ar9_res.push(obj[key]);
         } else {
             t9(obj[key]);
         }
     }
-
 }
-
 
 document.querySelector('.b-9').addEventListener('click', () => {
     for (let key in ar9) {
@@ -323,53 +262,47 @@ document.querySelector('.b-9').addEventListener('click', () => {
 // Напишите рекурсивную функцию t10, которая создает массив ar10_res фамилии людей у которых нет информации о возрасте.
 
 let ar10 = {
-    "ivanov": {
+    ivanov: {
         age: 25,
         parent: {
-            "ivanov-a": {
+            'ivanov-a': {
                 age: 45,
-                parent: {}
+                parent: {},
             },
-            "ivanov-b": {
+            'ivanov-b': {
                 age: 43,
                 parent: {
-                    "sergeev-a": {
+                    'sergeev-a': {
                         age: 88,
                         parent: {
-                            "lionenko": {}
-                        }
+                            lionenko: {},
+                        },
                     },
-                }
-            }
-        }
+                },
+            },
+        },
     },
-    "kostenko": {
+    kostenko: {
         age: 56,
         parent: {
-            "ignatenko": {
+            ignatenko: {
                 parent: {
-                    "sidorenko": {}
-                }
+                    sidorenko: {},
+                },
             },
-            "sniezko": {
-                age: 45
-            }
-        }
-    }
-}
+            sniezko: {
+                age: 45,
+            },
+        },
+    },
+};
 let ar10_res = [];
-function t10(k, obj) {
-
-}
+function t10(k, obj) {}
 
 document.querySelector('.b-10').addEventListener('click', () => {
-
     for (let key in ar10) {
-
         t10(key, ar10[key]);
-
     }
 
     document.querySelector('.out-10').innerHTML = ar10_res;
 });
-

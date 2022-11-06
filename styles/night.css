@@ -1,6 +1,6 @@
 body {
-	background-color: #333333;
-	color: #6a9955;
+  background-color: #333333;
+  color: #6a9955;
 }
 
 h1,
@@ -10,17 +10,17 @@ h4,
 h5,
 h6,
 h7 {
-	color: #e8e7e7;
+  color: #e8e7e7;
 }
 
 a,
 a:hover,
 a:visited {
-	color: #a2c9ff;
+  color: #a2c9ff;
 }
 
 section {
-	border-bottom: 1px solid #466638;
+  border-bottom: 1px solid #466638;
 }
 
 .button,
@@ -28,8 +28,8 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-	color: #6a9955;
-	border: 1px solid #6a9955;
+  color: #6a9955;
+  border: 1px solid #6a9955;
 }
 
 .button:hover,
@@ -42,9 +42,9 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-	color: #5ca83a;
-	border-color: #5ca83a;
-	outline: 0;
+  color: #5ca83a;
+  border-color: #5ca83a;
+  outline: 0;
 }
 
 div.out-1,
@@ -77,6 +77,6 @@ div.out-27,
 div.out-29,
 div.out-28,
 div.out-30 {
-	color: #1b1b1b;
-	font-family: monospace;
+  color: #1b1b1b;
+  font-family: monospace;
 }

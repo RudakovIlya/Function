@@ -1,40 +1,40 @@
 body {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 h1 {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-	font-size: 2.1rem;
+  font-size: 2.1rem;
 }
 
 h3 {
-	font-size: 1.9rem;
+  font-size: 1.9rem;
 }
 
 h4 {
-	font-size: 1.2rem;
-	font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 h1.site-title {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 h2.site-title {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 section h3 {
-	font-size: 1.1rem;
-	text-transform: uppercase;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 section {
-	margin: 30px 0;
-	padding: 20px 0;
-	border-bottom: 1px solid #3f8efc;
+  margin: 30px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #3f8efc;
 }
 
 .out-1,
@@ -67,21 +67,21 @@ section {
 .out-28,
 .out-29,
 .out-30 {
-	background: #dcdcdc;
-	padding: 10px;
+  background: #dcdcdc;
+  padding: 10px;
 }
 
 .text-orange {
-	color: orange;
+  color: orange;
 }
 
 .bg-orange {
-	background: orange;
+  background: orange;
 }
 
 pre {
-	background: #bfd8ff;
-	padding: 10px;
+  background: #bfd8ff;
+  padding: 10px;
 }
 
 pre,
@@ -93,19 +93,19 @@ p,
 ul,
 ol,
 form {
-	margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .cd {
-	font-family: monospace;
-	background: aliceblue;
-	padding-left: 15px;
-	border-left: 2px solid #33c3f0;
+  font-family: monospace;
+  background: aliceblue;
+  padding-left: 15px;
+  border-left: 2px solid #33c3f0;
 }
 
 div.section {
-	border-top: 1px solid #c0c0c0;
-	border-bottom: 1px solid #c0c0c0;
-	margin: 20px 0;
-	padding: 20px 0;
+  border-top: 1px solid #c0c0c0;
+  border-bottom: 1px solid #c0c0c0;
+  margin: 20px 0;
+  padding: 20px 0;
 }

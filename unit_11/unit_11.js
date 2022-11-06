@@ -6,20 +6,14 @@ function t1(elem) {
     r1(elem);
 
     function r1(element) {
-
         const child = element.children;
 
-
-        Array.from(child).forEach(item => {
-
+        Array.from(child).forEach((item) => {
             out += item.tagName + ' ';
 
             r1(item);
-
         });
-
     }
-
 
     return out;
 }
@@ -29,7 +23,6 @@ document.querySelector('.b-1').addEventListener('click', () => {
     document.querySelector('.out-1').textContent = t1(z1);
 });
 
-
 // Task 2
 // При нажатии кнопки запускается функция t2. Функция t2, с помощью рекурсивной функции r2 должна суммировать числа из всех элементов внутри div.z-2. Результат - сумму s - функция t1 должна возвращать. Вывод на этом примере - 10.
 
@@ -38,25 +31,16 @@ function t2(elem) {
     r2(elem);
 
     function r2(element) {
-
         const child = element.children;
 
-        Array.from(child).forEach(item => {
-
+        Array.from(child).forEach((item) => {
             if (Number.isInteger(+item.textContent)) {
-
                 s += +item.textContent;
-
             } else {
-
                 r2(item);
-
             }
-
-        })
-
+        });
     }
-
 
     return s;
 }
@@ -66,7 +50,6 @@ document.querySelector('.b-2').addEventListener('click', () => {
     document.querySelector('.out-2').textContent = t2(z2);
 });
 
-
 // Task 3
 // При нажатии кнопки запускается функция t3. Функция t3, с помощью рекурсивной функции r3 должна очистить текст внутри z-3 от тегов span, b, i и p. Должен остаться только текст со знаками препинания в переменной out. Функция t3 должна возвращать out.
 
@@ -75,23 +58,17 @@ function t3(elem) {
     r3(elem);
 
     function r3(element) {
-
         const child = element.childNodes;
 
-
-        Array.from(child).forEach(item => {
-
+        Array.from(child).forEach((item) => {
             if (item.nodeName === '#text') {
-
                 element.textContent += item.textContent;
 
                 out += item.textContent;
-
             }
 
             r3(item);
-        })
-
+        });
     }
 
     return out;
@@ -102,32 +79,23 @@ document.querySelector('.b-3').addEventListener('click', () => {
     document.querySelector('.out-3').textContent = t3(z3);
 });
 
-
 // Task 4
 
-// При нажатии кнопки запускается функция t4. Функция t4, с помощью рекурсивной функции r4 должна тем тегам внутри z-4, которые не имеют вложенных тегов добавить style.background = orange. 
+// При нажатии кнопки запускается функция t4. Функция t4, с помощью рекурсивной функции r4 должна тем тегам внутри z-4, которые не имеют вложенных тегов добавить style.background = orange.
 
 function t4(elem) {
     r4(elem);
 
     function r4(element) {
-
         const nodes = element.children;
 
-        Array.from(nodes).forEach(item => {
-
+        Array.from(nodes).forEach((item) => {
             if (item.children.length !== 0) {
-
                 r4(item);
-
             } else {
-
-                item.style.color = 'red'
-
+                item.style.color = 'red';
             }
-
-        })
-
+        });
     }
 }
 
@@ -136,36 +104,26 @@ document.querySelector('.b-4').addEventListener('click', () => {
     t4(z4);
 });
 
-
-
 // Task 5
-// При нажатии кнопки запускается функция t5. Функция t5, с помощью рекурсивной функции r5 должна те теги внутри z-5, которые не имеют вложенных тегов заменить на теги mark. 
+// При нажатии кнопки запускается функция t5. Функция t5, с помощью рекурсивной функции r5 должна те теги внутри z-5, которые не имеют вложенных тегов заменить на теги mark.
 
 function t5(elem) {
     r5(elem);
 
     function r5(element) {
-
         const child = element.children;
 
-        Array.from(child).forEach(item => {
-
+        Array.from(child).forEach((item) => {
             if (item.children.length !== 0) {
-
                 r5(item);
-
             } else {
-
                 const mark = document.createElement('mark');
 
                 mark.append(item.textContent);
 
-                item.replaceWith(mark)
-
+                item.replaceWith(mark);
             }
-
-        })
-
+        });
     }
 }
 
@@ -173,4 +131,3 @@ document.querySelector('.b-5').addEventListener('click', () => {
     let z5 = document.querySelector('.z-5');
     t5(z5);
 });
-
